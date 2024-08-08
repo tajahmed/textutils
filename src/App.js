@@ -1,17 +1,17 @@
 import "./App.css";
 import Alert from "./compoents/Alert";
-import About from "./compoents/About";
+// import About from "./compoents/About";
 import Navbar from "./compoents/Navbar";
 import TextForm from "./compoents/TextForm";
 import React, {useState} from 'react'
 
-import {
-  BrowserRouter as Router,
-  // Switch,
-  Route,
-  Routes,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   // Switch,
+//   Route,
+//   Routes,
+//   Link
+// } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -48,21 +48,22 @@ setTimeout(()=>{setAlert(null)}, 2000);
 
   return (
     <>
-    <Router>
+    {/* <Router> */}
           <Navbar title="MyApp" toggle={toggle} mode={mode} style={style} abttxt= "its abt me"/>
           <Alert alert={alert}/>
           <div className="container">
-          <Routes>
+          {/* <Routes>
           <Route exact path="/about" element={<About/>}>          </Route>
           <Route exact path="/" element={ <TextForm heading="EnterYour text" mode={mode} style={style} showAlert={showAlert}/> }>                  </Route>
-        </Routes>
-          
+        </Routes> */}
+        <TextForm heading="EnterYour text" mode={mode} style={style} showAlert={showAlert}/>
+        <About/>
           
           </div>
          
 
 
-    </Router>
+    {/* </Router> */}
 
     </>
   );
