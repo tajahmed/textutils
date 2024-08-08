@@ -57,7 +57,7 @@ setTimeout(()=>{setAlert(null)}, 2000);
           <Route exact path="/" element={ <TextForm heading="EnterYour text" mode={mode} style={style} showAlert={showAlert}/> }>                  </Route>
         </Routes> */}
         <TextForm heading="EnterYour text" mode={mode} style={style} showAlert={showAlert}/>
-        <About/>
+        {/* <About/> */}
           
           </div>
          
